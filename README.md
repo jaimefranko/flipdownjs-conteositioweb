@@ -86,6 +86,42 @@ body {
 
 ---
 
+## Código JavaScript explicado
+
+```javascript
+document.addEventListener('DOMContentLoaded', () => {
+  // Definir la fecha objetivo para el conteo regresivo
+  var fechaObjetivo = new Date('2026-01-01T00:00:00');
+  var timestampObjetivo = fechaObjetivo.getTime() / 1000; // Convertir a segundos
+
+  // Inicializar FlipDown
+  var flipdown = new FlipDown(timestampObjetivo)
+    .start() // Iniciar el conteo regresivo
+    .ifEnded(() => { // Acción al finalizar
+      alert("Conteo Regresivo Terminado");
+      console.log('El contador ha terminado!');
+    });
+
+  // Aplicar tema oscuro
+  let body = document.body;
+  body.classList.toggle('dark-theme');
+
+  // Mostrar versión de FlipDown.js (opcional)
+  var ver = document.getElementById('ver');
+  if(ver) ver.innerHTML = flipdown.version;
+});
+```
+
+> Este script hace lo siguiente:
+>
+> * Espera a que el DOM esté cargado.
+> * Define la fecha objetivo y la convierte a timestamp en segundos.
+> * Inicializa FlipDown y arranca la cuenta regresiva.
+> * Ejecuta acciones al terminar (alerta y log en consola).
+> * Permite activar un tema oscuro y mostrar la versión de la librería.
+
+---
+
 ## Cómo usar
 
 1. Clona este repositorio o descárgalo como ZIP.
@@ -99,6 +135,13 @@ var fechaObjetivo = new Date('2026-01-01T00:00:00');
 4. Modifica los estilos CSS según tus preferencias para cambiar colores, tamaño o fuente.
 
 ---
+# VER DEMO ONLNE
+
+<a href="[https://jaimefranko.com/](https://jaimefranko.com/ejemplos_php/flipdownjs/" target="_blank" 
+   style="display:inline-block; background-color:#08C; color:white; padding:10px 20px; 
+          text-decoration:none; border-radius:5px; font-weight:bold;">
+   Ir a mi sitio web
+</a>
 
 ## Nota
 
@@ -109,3 +152,4 @@ Este repositorio es un **fork** del proyecto original [FlipDown.js](https://gith
 ## Licencia
 
 MIT
+
