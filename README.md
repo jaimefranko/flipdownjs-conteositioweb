@@ -137,7 +137,7 @@ var fechaObjetivo = new Date('2026-01-01T00:00:00');
 ---
 # VER DEMO ONLNE
 
-[https://jaimefranko.com/](https://jaimefranko.com/ejemplos_php/flipdownjs/]
+[https://jaimefranko.com/ejemplos_php/flipdownjs/]
 
 ## Nota
 
